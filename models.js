@@ -24,4 +24,4 @@ Gardener.hasOne(Plot);
 Vegetable.belongsToMany(Plot, {through: 'vegetable_plot'});
 Plot.belongsToMany(Vegetable, {through: 'vegetable_plot'});
 
-Gardener.belongsTo(Vegetable);
+Gardener.belongsTo(Vegetable, {as: 'favoriteVegetable'});
